@@ -6,7 +6,7 @@ const router = require("./routes/router");
 const cors = require("cors");
 
 
-// const port = 8005;
+
 
 const bodyParser = require("body-parser");
 
@@ -22,6 +22,6 @@ app.use(router);
 app.use("/uploads",express.static("./uploads"));
 
 
-app.listen(port,()=>{
+app.listen(process.env.PORT,()=>{
     console.log(`server start at port no ${process.env.PORT}`)
 })
